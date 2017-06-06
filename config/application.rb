@@ -16,6 +16,8 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+require "active_model_serializers"
+
 module Commerce
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -29,6 +31,11 @@ module Commerce
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     # https://administrate-prototype.herokuapp.com/getting_started
-    config.api_only = false
+    config.api_only = true
+
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use Rack::MethodOverride
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
   end
 end
