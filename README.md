@@ -1,5 +1,12 @@
+# EXAMPLES
+
+curl -i -H "Accept: application/json" localhost:3000/api/v1/products
+
+curl -i -H "Accept: application/json" localhost:3000/api/v1/products/1
+
 # TODO
 
+* add fixture data for testing
 * model and controller tests
 * validate start date is before end date
 * filters (all, active, discontinued) for dashboard views
