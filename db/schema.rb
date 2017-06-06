@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605231824) do
+ActiveRecord::Schema.define(version: 20170606174052) do
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170605231824) do
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "discontinued", default: false, null: false
   end
 
   create_table "rate_plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -32,7 +31,6 @@ ActiveRecord::Schema.define(version: 20170605231824) do
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "discontinued", default: false, null: false
     t.index ["product_id"], name: "index_rate_plans_on_product_id"
   end
 

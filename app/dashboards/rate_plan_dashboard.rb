@@ -18,7 +18,6 @@ class RatePlanDashboard < Administrate::BaseDashboard
     price: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    discontinued: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -33,7 +32,6 @@ class RatePlanDashboard < Administrate::BaseDashboard
     :price,
     :start_date,
     :end_date,
-    :discontinued,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -49,7 +47,6 @@ class RatePlanDashboard < Administrate::BaseDashboard
     :price,
     :created_at,
     :updated_at,
-    :discontinued,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -63,7 +60,6 @@ class RatePlanDashboard < Administrate::BaseDashboard
     :end_date,
     :recurrence,
     :price,
-    :discontinued,
   ].freeze
 
   # Overwrite this method to customize how rate plans are displayed

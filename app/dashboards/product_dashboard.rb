@@ -16,7 +16,6 @@ class ProductDashboard < Administrate::BaseDashboard
     end_date: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    discontinued: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -29,7 +28,6 @@ class ProductDashboard < Administrate::BaseDashboard
     :rate_plans,
     :start_date,
     :end_date,
-    :discontinued,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -42,7 +40,6 @@ class ProductDashboard < Administrate::BaseDashboard
     :end_date,
     :created_at,
     :updated_at,
-    :discontinued,
     :rate_plans,
   ].freeze
 
@@ -54,7 +51,6 @@ class ProductDashboard < Administrate::BaseDashboard
     :description,
     :start_date,
     :end_date,
-    :discontinued,
     :rate_plans,
   ].freeze
 

@@ -3,7 +3,7 @@ module Api::V1
 
     def index
       # Only return active products to customers
-      products = Product.where("end_date >= ? AND discontinued = ?", Date.current, false)
+      products = Product.where("end_date >= ?", Date.current)
       render jsonapi: products, each_serializer: ProductSerializer
     end
 
