@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  start_date: 2017-06-04
-  end_date: 2017-06-04
-
-two:
-  title: MyString
-  description: MyText
-  start_date: 2017-06-04
-  end_date: 2017-06-04
+  title: Product1
+  description: Description1
+  start_date: <%= Date.current %>
+  end_date: <%= Date.current + 1.day %>
