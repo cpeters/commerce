@@ -8,6 +8,7 @@ class ProductDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    rate_plans: Field::HasMany,
     id: Field::Number,
     title: Field::String,
     description: Field::Text,
@@ -15,6 +16,7 @@ class ProductDashboard < Administrate::BaseDashboard
     end_date: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    discontinued: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,10 +25,11 @@ class ProductDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
     :title,
-    :description,
+    :rate_plans,
     :start_date,
+    :end_date,
+    :discontinued,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,6 +42,8 @@ class ProductDashboard < Administrate::BaseDashboard
     :end_date,
     :created_at,
     :updated_at,
+    :discontinued,
+    :rate_plans,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -49,6 +54,8 @@ class ProductDashboard < Administrate::BaseDashboard
     :description,
     :start_date,
     :end_date,
+    :discontinued,
+    :rate_plans,
   ].freeze
 
   # Overwrite this method to customize how products are displayed
