@@ -1,8 +1,12 @@
-# EXAMPLES
+# Usage examples
 
-curl -i -H "Accept: application/json" localhost:3000/api/v1/products
+Admin UI
+`http://localhost:3000/admin`
 
-curl -i -H "Accept: application/json" localhost:3000/api/v1/products/1
+Customer API
+`curl -i -H "Accept: application/json" localhost:3000/api/v1/products`
+
+`curl -i -H "Accept: application/json" localhost:3000/api/v1/products/1`
 
 # TODO
 
@@ -11,6 +15,7 @@ curl -i -H "Accept: application/json" localhost:3000/api/v1/products/1
 * ~~validate start date is before end date~~
 * filters (all, active, discontinued) for dashboard views
 
+# Future Enhancements
 * API rate limiting
 * authentication for admin
 
