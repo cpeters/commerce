@@ -2,8 +2,7 @@ module Api::V1
   class ProductsController < BaseController
 
     def index
-      # Only return active products to customers
-      products = Product.where("end_date >= ?", Date.current)
+      products = Product.active
       render jsonapi: products, each_serializer: ProductSerializer
     end
 

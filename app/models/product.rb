@@ -7,4 +7,6 @@ class Product < ApplicationRecord
 
   validate :end_date_on_or_after_start_date
 
+  scope :active, -> { where("end_date >= ?", Date.current) }
+
 end
