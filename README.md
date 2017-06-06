@@ -6,11 +6,10 @@ curl -i -H "Accept: application/json" localhost:3000/api/v1/products/1
 
 # TODO
 
-* add fixture data for testing
-* model and controller tests
-* validate start date is before end date
+* ~~add fixture data for testing~~
+* ~~model and controller tests~~
+* ~~validate start date is before end date~~
 * filters (all, active, discontinued) for dashboard views
-* set discontinued on associated rate_plans when product is discontinued
 
 * API rate limiting
 * authentication for admin
