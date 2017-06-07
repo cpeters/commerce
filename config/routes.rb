@@ -8,12 +8,6 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :admin do
-    resources :products
-    resources :rate_plans
-    root to: "products#index"
-  end
-
   # Administrate expects these routes that aren't part of resources when in api mode
   namespace :admin, as: '' do
     get '/products/new', to: 'products#new', as: 'new_admin_product'
@@ -21,6 +15,12 @@ Rails.application.routes.draw do
 
     get '/rate_plans/new', to: 'rate_plans#new', as: 'new_admin_rate_plan'
     get '/rate_plans/:id/edit', to: 'rate_plans#edit', as: 'edit_admin_rate_plan'
+  end
+ 
+  namespace :admin do
+    resources :products
+    resources :rate_plans
+    root to: "products#index"
   end
 
 end
